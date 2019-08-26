@@ -7,11 +7,14 @@ public class MockPrinter extends Printer{
         return text;
     }
 
-    @Override
-    public  void print(String printThis){
-        super.print(printThis);
-        text = printThis;
+    public void setText(String text) {
+        this.text = text;
     }
 
+    @Override
+    public  void print(String printThis){
+       // super.print(printThis);
+        this.text = printThis;
+    }
 
 }
